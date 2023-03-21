@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/oreoreo/">
+    <title>Oreoreo</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark light">
+    <link rel="stylesheet" href="style.css">
+    <script src="themes/theme-constants.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body class="index-body">
+    <div class="input">
+      <h1 id="title"><a href="https://github.com/marquis-ng/oreoreo">Oreoreo</a></h1>
+      <input id="text" onkeyup="render();">
+      <select id="themename" onchange="setTheme();"></select>
+    </div>
+    <div class="display-outer">
+      <div class="display">
+        <div class="theme-objects" style="display: block"></div>
+        <img class="theme-error" src="themes/error.jpg" alt="" style="display: none">
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+@import url("themes/themes.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+body {
+  height: 100vh;
+  height: 100dvh;
+  width: 100vw;
+  width: 100dvw;
+  margin: 0;
+  padding: 0;
+}
+
+.index-body {
+  display: flex;
+  overflow: hidden;
+}
+
+#title {
+  margin: 0;
+  text-align: center;
+  font-family: Poppins, Verdana, sans-serif;
+  font-size: 4em;
+}
+
+#title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#text, #themename {
+  padding: 1vmin 2vmin;
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 3vmin;
+  text-align: left;
+  font-family: Poppins, Verdana, sans-serif;
+  font-size: 1.15em;
+}
+
+.display-outer {
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 3vmin;
+  overflow: hidden;
+}
+
+.display {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.theme-objects {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  position: relative;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.theme-object {
+  width: 100%;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+.theme-error {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#err404, .errmsg {
+  display: inline-block;
+}
+
+#err404 {
+  margin: 0 20px;
+  font-family: Poppins, Verdana, sans-serif;
+  font-size: min(35vw, 11em);
+  font-weight: 1000;
+}
+
+.errmsg {
+  margin: 0 30px;
+}
+
+.errmsg1, .errmsg2, .errmsg3 {
+  display: block;
+  font-family: Poppins, Verdana, sans-serif;
+  font-size: 1.5em;
+}
+
+.errbtn {
+  display: block;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+.errbtn button {
+  padding: 10px max(30px, 10vw);
+  border: 2px solid;
+  border-radius: 20px;
+  font-family: Poppins, Verdana, sans-serif;
+  font-size: 1.2em;
+}
+
+#text:focus, #themename:focus, .errbtn button:hover {
+  border: 2px solid;
+  outline: none;
+}
+
+/* Displays with width <= 800px */
+@media all and (max-width: 800px) {
+  .index-body {
+    flex-direction: column;
+  }
+
+  .input {
+    width: 96%;
+    margin: 0 auto;
+  }
+
+  #text, #themename {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .display-outer {
+    width: 96%;
+    margin: 0 auto 2%;
+  }
+}
+
+/* Displays with width > 800px */
+@media not all and (max-width: 800px) {
+  .index-body {
+    flex-direction: row;
+  }
+
+  .input {
+    flex: 0 0 40%;
+    margin: auto;
+  }
+
+  #text, #themename {
+    width: 75%;
+    margin: 10px auto;
+  }
+
+  .display-outer {
+    margin: 5vmin;
+  }
+}
+
+/* Light theme */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fefcf2;
+  }
+
+  #title, #text, #themename, #err404, .errbtn button {
+    color: #171600;
+  }
+
+  #text, #themename, .errbtn button {
+    border-color: #171600;
+    background-color: #e8e8e8;
+  }
+
+  #text:focus, #themename:focus, .errbtn button:hover {
+    border-color: #918f84;
+  }
+
+  .display-outer {
+    border-color: #171600;
+  }
+
+  .display {
+    background-color: #fefaca;
+  }
+
+  .errmsg1 {
+    color: #c41e3a;
+  }
+
+  .errmsg2 {
+    color: #0047ab;
+  }
+
+  .errmsg3 {
+    color: #097969;
+  }
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #272727;
+  }
+
+  #title, #text, #themename, #err404, .errbtn button {
+    color: #faf9f6;
+  }
+
+  #text, #themename, .errbtn button {
+    border-color: #faf9f6;
+    background-color: #36454f;
+  }
+
+  #text:focus, #themename:focus, .errbtn button:hover {
+    border-color: #a7a6f9;
+  }
+
+  .display-outer {
+    border-color: #faf9f6;
+  }
+
+  .display {
+    background-color: #696969;
+  }
+
+  .errmsg1 {
+    color: #d22b2b;
+  }
+
+  .errmsg2 {
+    color: #0096ff;
+  }
+
+  .errmsg3 {
+    color: #50c878;
+  }
+}

@@ -1,0 +1,11 @@
+.oreo-theme, .reore-theme {
+    transform-origin: top;
+    transform: perspective(550px) rotateX(60deg);
+    filter: drop-shadow(0px 2px 3px #171717);
+}
+
+.egg-theme {
+    transform-origin: top;
+    transform: perspective(500px) rotateX(70deg);
+    filter: drop-shadow(0px 2px 3px #171717);
+}
